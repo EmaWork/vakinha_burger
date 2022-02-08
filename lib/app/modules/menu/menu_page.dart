@@ -1,9 +1,7 @@
-
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vakinha_burger_mobile/app/modules/menu/menu_controller.dart';
+import 'package:flutter/material.dart';
 import 'package:vakinha_burger_mobile/app/modules/menu/widgets/product_tile.dart';
-
+import './menu_controller.dart';
 
 class MenuPage extends GetView<MenuController> {
   const MenuPage({Key? key}) : super(key: key);
@@ -17,7 +15,9 @@ class MenuPage extends GetView<MenuController> {
           itemCount: controller.menu.length,
           itemBuilder: (context, index) {
             final prod = controller.menu[index];
-            return ProductTile(product: prod,);
+            return ProductTile(
+              product: prod,
+            );
           },
         ),
       );
